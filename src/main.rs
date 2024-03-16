@@ -10,12 +10,17 @@ fn main() {
     // Data Types
     //Strings
     let name: &str = "Farhan";
+    // char (single quotes only)
+    let first_letter: char = 'a';
     // assigned integers (can include negative numbers: range of values starts from negative and goes positive)
     let negative_age: i32 = -30;
     // unassigned (can only by positive. range of number starts at zero and goes up)
     let age: u32 = 30;
     // floats
     let college_gpa: f32 = 3.1;
+    // boolean
+    let is_alive: bool = true;
+    let is_dead: bool = false;
     // mutable variable (rust variables are immutable so we need to make it mutable by adding mut keyword to variables)
     let mut i: i32 = 0;
     //while loop showing mutablility of variable
