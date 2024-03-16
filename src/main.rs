@@ -1,5 +1,26 @@
 #![allow(unused)]
 
 fn main() {
-    println!("Hello World");
+    // printing hello world
+    println!("hello world");
+    // creating and printing a variable
+    let x: &str = "Farhan"; // added type of string
+    println!("{}", x);
+
+    // Data Types
+    //Strings
+    let name: &str = "Farhan";
+    // assigned integers (can include negative numbers: range of values starts from negative and goes positive)
+    let negative_age: i32 = -30;
+    // unassigned (can only by positive. range of number starts at zero and goes up)
+    let age: u32 = 30;
+    // floats
+    let college_gpa: f32 = 3.1;
+    // mutable variable (rust variables are immutable so we need to make it mutable by adding mut keyword to variables)
+    let mut i: i32 = 0;
+    //while loop showing mutablility of variable
+    while i < 10 {
+        i += 1;
+        println!("{}", i);
+    }
 }
