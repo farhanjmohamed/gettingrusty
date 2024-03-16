@@ -30,4 +30,17 @@ fn main() {
         i += 1;
         println!("{}", i);
     }
+
+    // Name Shadowing (strange concept) lots to understand still.
+    let y = 4;
+    println!("{}", y);
+
+    // when changing in a scope it only changes within that scope and no where else
+    {
+        let y = y - 4;
+        println!("{}", y);
+    }
+
+    let y = y + 1;
+    println!("{}", y);
 }
