@@ -4,7 +4,7 @@ fn main() {
     // printing hello world
     println!("hello world");
     // creating and printing a variable
-    let x: &str = "Farhan"; // added type of string
+    let x: &str = "Farhan"; // added type of string. you dont have to add type to let.
     println!("{}", x);
 
     // Data Types
@@ -31,7 +31,7 @@ fn main() {
         println!("{}", i);
     }
 
-    // Name Shadowing (strange concept) lots to understand still.
+    // Name Shadowing (strange concept) lots to understand still. (using let makes you redefine the variable but after its defined if you dont use let you will get error unless mutable)
     let y = 4;
     println!("{}", y);
 
@@ -43,4 +43,8 @@ fn main() {
 
     let y = y + 1;
     println!("{}", y);
+
+    // constant value (the convention is different and some rules to follow)
+    const SECONDS_IN_MINUTES: u32 = 60; // all caps for const and snake case for naming. must provide type for all consts.
+    println!("{}", SECONDS_IN_MINUTES);
 }
