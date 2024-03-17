@@ -47,4 +47,11 @@ fn main() {
     // constant value (the convention is different and some rules to follow)
     const SECONDS_IN_MINUTES: u32 = 60; // all caps for const and snake case for naming. must provide type for all consts.
     println!("{}", SECONDS_IN_MINUTES);
+
+    println!("the sum is {}", add_numbers(5, 7));
+}
+
+// made a function :) return type after arrow.
+fn add_numbers(x: i32, y: i32) -> i32 {
+    x + y
 }
