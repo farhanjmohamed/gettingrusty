@@ -1,4 +1,5 @@
 #![allow(unused)]
+use std::io;
 
 fn main() {
     // printing hello world
@@ -49,6 +50,15 @@ fn main() {
     println!("{}", SECONDS_IN_MINUTES);
 
     println!("the sum is {}", add_numbers(5, 7));
+
+    println!("What is your favorite cartoon?");
+    let mut favorite_cartoon: String = String::new();
+    io::stdin().read_line(&mut favorite_cartoon);
+    println!("your favorite cartoon is {}", favorite_cartoon);
+
+
+
+
 }
 
 // made a function :) return type after arrow.
