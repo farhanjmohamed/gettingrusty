@@ -1,5 +1,5 @@
 #![allow(unused)]
-use std::io;
+use std::{i8, io};
 
 fn main() {
     // printing hello world
@@ -22,6 +22,8 @@ fn main() {
     // boolean
     let is_alive: bool = true;
     let is_dead: bool = false;
+
+    println!("{0} is {1} years old and his college gps was {2}. that statement is totally {3}", name, age, college_gpa, is_alive);
     // array (add type of value and length)
     let arr: [i32; 5] = [5, 4, 3, 2, 1];
     // mutable variable (rust variables are immutable so we need to make it mutable by adding mut keyword to variables)
@@ -56,12 +58,10 @@ fn main() {
     io::stdin().read_line(&mut favorite_cartoon);
     println!("your favorite cartoon is {}", favorite_cartoon);
 
-
-
-
 }
 
 // made a function :) return type after arrow.
 fn add_numbers(x: i32, y: i32) -> i32 {
     x + y
 }
+
