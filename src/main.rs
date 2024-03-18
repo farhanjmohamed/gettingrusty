@@ -8,7 +8,7 @@ fn main() {
     let x: &str = "Farhan"; // added type of string. you dont have to add type to let.
     println!("{}", x);
 
-    // Data Types
+    // Scaler Types
     //Strings
     let name: &str = "Farhan";
     // char (single quotes only)
@@ -24,8 +24,20 @@ fn main() {
     let is_dead: bool = false;
 
     println!("{0} is {1} years old and his college gps was {2}. that statement is totally {3}", name, age, college_gpa, is_alive);
+
+
+
+    //Compound Types
+    // Tuple
+    let tup: (i32, bool, char) = (1, true, 'f');
+    let mut tup2: (i8, bool, char) = (1, true, 'f'); // the type is reliant on elements being stored in the tuple.
+    tup2 = (2, false, 'a');
+
+    println!("Tuple: {}", tup2.1);
+
     // array (add type of value and length)
     let arr: [i32; 5] = [5, 4, 3, 2, 1];
+    let arr2: [&str; 3] = ["John", "Steve", "Nick"];
     // mutable variable (rust variables are immutable so we need to make it mutable by adding mut keyword to variables)
     let mut i: i32 = 0;
     //while loop showing mutablility of variable
@@ -55,8 +67,11 @@ fn main() {
 
     println!("What is your favorite cartoon?");
     let mut favorite_cartoon: String = String::new();
-    io::stdin().read_line(&mut favorite_cartoon);
+    io::stdin().read_line(&mut favorite_cartoon).expect("Failed to receive input!");
     println!("your favorite cartoon is {}", favorite_cartoon);
+
+    
+
 
 }
 
