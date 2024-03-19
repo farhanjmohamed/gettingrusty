@@ -1,5 +1,5 @@
 #![allow(unused)]
-use std::{i8, io};
+use std::io;
 
 fn main() {
     // printing hello world
@@ -38,6 +38,9 @@ fn main() {
     // array (add type of value and length)
     let arr: [i32; 5] = [5, 4, 3, 2, 1];
     let arr2: [&str; 3] = ["John", "Steve", "Nick"];
+
+    println!("{}", arr[2]);
+    println!("{}", arr2[1]);
     // mutable variable (rust variables are immutable so we need to make it mutable by adding mut keyword to variables)
     let mut i: i32 = 0;
     //while loop showing mutablility of variable
@@ -69,6 +72,17 @@ fn main() {
     let mut favorite_cartoon: String = String::new();
     io::stdin().read_line(&mut favorite_cartoon).expect("Failed to receive input!");
     println!("your favorite cartoon is {}", favorite_cartoon);
+
+    println!("Gimme num: ");
+    let mut a: String = String::new(); // mutatable new instance of a as a string
+    io::stdin().read_line( &mut a).expect("Good nummy"); // getting input of a
+    let mut num1: i32 = a.trim().parse().expect("int"); // setting value of a to a int
+    println!("Gimme nother: ");
+    let mut b: String = String::new();
+    io::stdin().read_line(&mut b).expect("good nummy");
+    let mut num2: i32 = b.trim().parse().expect("int");
+
+    println!("Your sum is {}", add_numbers(num1, num2));
 
     
 
